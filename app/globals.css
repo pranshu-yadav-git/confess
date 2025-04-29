@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Apply romantic font globally, fallback to sans */
+  font-family: 'Dancing Script', var(--font-inter), sans-serif;
+}
+
+@layer base {
+  :root {
+    /* --- Love Theme Colors (Pink Background) --- */
+    /* Background: Soft, slightly warm Pink/Beige - Increased Saturation */
+    --background: 350 70% 98%; /* Very Light Pinkish Beige (Increased Saturation) */
+    /* Foreground: Darker, slightly warm muted color for contrast */
+    --foreground: 350 25% 20%; /* Dark Muted Reddish-Brown */
+
+    /* Card/Popover Background: Slightly different light pink */
+    --card: 350 100% 97%; /* Very Light Pink */
+    --card-foreground: 350 25% 20%;
+    --popover: 350 100% 97%; /* Very Light Pink */
+    --popover-foreground: 350 25% 20%;
+
+    /* Primary: Soft Pastel Pink (Slightly darker than card) */
+    --primary: 350 100% 95%; /* Light Pink */
+    --primary-foreground: 350 60% 40%; /* Medium Dark Pink */
+
+    /* Secondary: Soft Pastel Blue (Complementary) - Kept for some contrast */
+    --secondary: 200 100% 97%; /* Baby Blue */
+    --secondary-foreground: 200 60% 40%; /* Medium Dark Blue */
+
+    /* Muted: Lighter pink/gray */
+    --muted: 350 60% 96%; /* Light Pinkish Gray */
+    --muted-foreground: 350 15% 50%; /* Muted Pink/Gray */
+
+    /* Accent: Rose Gold */
+    --accent: 350 33% 57%; /* Rose Gold (#B76E79) */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    /* Destructive: Standard Red - Keep standard for clarity */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border/Input: Light Pinkish Gray */
+    --border: 350 40% 92%; /* Slightly darker border */
+    --input: 350 40% 92%; /* Slightly darker input */
+
+    /* Ring: Accent Color (Rose Gold) */
+    --ring: 350 33% 57%;
+
+    /* Chart Colors (Optional, adjust if charts are used) */
+    --chart-1: 350 70% 60%; /* Pink */
+    --chart-2: 200 70% 60%; /* Blue */
+    --chart-3: 40 70% 60%;  /* Yellow/Gold */
+    --chart-4: 350 50% 75%; /* Lighter Pink */
+    --chart-5: 200 50% 75%; /* Lighter Blue */
+
+    --radius: 0.5rem;
+
+    /* --- Sidebar Theme (if applicable) --- */
+    --sidebar-background: 350 100% 99%; /* Almost White Pink */
+    --sidebar-foreground: 350 20% 25%;
+    --sidebar-primary: 350 33% 57%; /* Rose Gold */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 350 100% 94%; /* Lighter Pink for Accent */
+    --sidebar-accent-foreground: 350 60% 40%;
+    --sidebar-border: 350 20% 90%;
+    --sidebar-ring: 350 33% 57%;
+  }
+
+  .dark {
+    /* --- Dark Love Theme Colors (Pink/Plum Background) --- */
+    /* Background: Deep, warm plum/dark pink - Increased Saturation */
+    --background: 345 40% 18%; /* Dark Warm Pink/Plum (Increased Saturation) */
+    /* Foreground: Light, warm beige/pink for contrast */
+    --foreground: 350 40% 90%; /* Light Warm Pink/Beige */
+
+    /* Card/Popover Background: Slightly darker than main bg */
+    --card: 345 30% 15%;
+    --card-foreground: 350 40% 90%;
+    --popover: 345 30% 15%;
+    --popover-foreground: 350 40% 90%;
+
+    /* Primary: Muted dark pink */
+    --primary: 350 40% 35%; /* Dark Muted Pink */
+    --primary-foreground: 350 100% 95%; /* Very Light Pink */
+
+    /* Secondary: Muted dark blue */
+    --secondary: 200 35% 30%; /* Dark Muted Blue */
+    --secondary-foreground: 200 100% 95%; /* Very Light Blue */
+
+    /* Muted: Darker neutral, slightly warm pink/gray */
+    --muted: 345 20% 25%; /* Darker Plum/Gray */
+    --muted-foreground: 350 20% 70%; /* Lighter Pink/Gray */
+
+    /* Accent: Richer Rose Gold */
+    --accent: 350 45% 60%; /* Richer Rose Gold */
+    --accent-foreground: 350 10% 15%; /* Dark for contrast */
+
+    /* Destructive: Standard Red - Keep standard for clarity */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border/Input: Darker shades */
+    --border: 345 15% 30%; /* Darker Border */
+    --input: 345 15% 30%; /* Darker Input */
+
+    /* Ring: Accent Color */
+    --ring: 350 45% 60%;
+
+    /* Chart Colors (Dark Theme Adjustments) */
+    --chart-1: 350 60% 55%;
+    --chart-2: 200 60% 55%;
+    --chart-3: 40 60% 55%;
+    --chart-4: 350 40% 70%;
+    --chart-5: 200 40% 70%;
+
+    /* --- Dark Sidebar Theme (if applicable) --- */
+    --sidebar-background: 345 30% 12%; /* Even Darker Plum */
+    --sidebar-foreground: 350 40% 90%;
+    --sidebar-primary: 350 45% 60%; /* Richer Rose Gold */
+    --sidebar-primary-foreground: 350 10% 15%;
+    --sidebar-accent: 350 40% 28%; /* Dark Pink Accent */
+    --sidebar-accent-foreground: 350 100% 95%;
+    --sidebar-border: 345 15% 30%;
+    --sidebar-ring: 350 45% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Removed basic confetti CSS as react-confetti handles it */
