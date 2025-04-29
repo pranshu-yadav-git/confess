@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Dancing_Script, Inter } from 'next/font/google'; // Use Inter as fallback/base
 import './globals.css';
-import { Toaster } from "@/components/ui/toaster"; // Import Toaster
+import { Toaster } from "../components/ui/toaster"; // Import Toaster
 
 // Using Inter as a base sans-serif font
 const inter = Inter({
