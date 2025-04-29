@@ -2,9 +2,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import LetterTiles from '@/components/letter-tiles';
-import OpenLetter from '@/components/open-letter';
-import ProposalGame from '@/components/proposal-game';
+import LetterTiles from './components/letter-tiles';
+import OpenLetter from './components/open-letter';
+import ProposalGame from './components/proposal-game';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Define the possible states of the application view
