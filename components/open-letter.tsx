@@ -3,8 +3,8 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card } from '@/components/ui/card'; // Use Card for structure if needed, or just divs
-import { cn } from '@/lib/utils';
+import { Card } from '../components/ui/card'; // Use Card for structure if needed, or just divs
+import { cn } from '../lib/utils';
 
 interface OpenLetterProps {
   onPaperClick: () => void; // Callback when the fully revealed paper is clicked
@@ -44,54 +44,54 @@ const OpenLetter: React.FC<OpenLetterProps> = ({ onPaperClick }) => {
 
   // Define animation variants for the letter paper
   const paperVariants = {
-      hidden: { // Inside envelope initial state
-          y: '60%',
-          opacity: 0,
-          scale: 0.9,
-          position: 'absolute',
-          width: '90%',
-          height: '95%',
-          bottom: 0,
-          left: '5%', // Centered within the initial relative container
-          zIndex: 20,
-      },
-      partial: { // Partially revealed state
-          y: '10%',
-          opacity: 1,
-          scale: 1,
-          position: 'absolute',
-          width: '90%',
-          height: '95%',
-          bottom: 0,
-          left: '5%',
-          zIndex: 20,
-      },
-      full: { // Full screen revealed state
-          opacity: 1,
-          position: 'fixed', // Use fixed positioning to break out of container
-          inset: '2rem', // Padding around the screen
-          width: 'calc(100vw - 4rem)',
-          height: 'calc(100vh - 4rem)',
-          y: 0,
-          x: 0, // Ensure centering or edge-to-edge based on inset
-          scale: 1,
-          zIndex: 50, // Bring to front
-          bottom: 'auto', // Override absolute positioning helpers
-          left: 'auto',
-      },
-      shrinking: { // State when shrinking back before transition
-          y: '10%', // Go back towards partial position
-          opacity: 1,
-          scale: 1, // Back to normal scale
-          position: 'fixed', // Keep fixed during shrink to avoid jump? Or back to absolute? Test 'absolute'
-          inset: 'auto', // Remove inset
-          width: '90%', // Back to original width (relative to parent)
-          height: '95%', // Back to original height
-          bottom: 0,
-          left: '5%', // Centered again
-          zIndex: 20, // Lower z-index
-      }
-  };
+    hidden: { // Inside envelope initial state
+        y: '60%',
+        opacity: 0,
+        scale: 0.9,
+        position: 'absolute' as 'absolute', // Correctly typed
+        width: '90%',
+        height: '95%',
+        bottom: 0,
+        left: '5%',
+        zIndex: 20,
+    },
+    partial: { // Partially revealed state
+        y: '10%',
+        opacity: 1,
+        scale: 1,
+        position: 'absolute' as 'absolute', // Correctly typed
+        width: '90%',
+        height: '95%',
+        bottom: 0,
+        left: '5%',
+        zIndex: 20,
+    },
+    full: { // Full screen revealed state
+        opacity: 1,
+        position: 'fixed' as 'fixed', // Correctly typed
+        inset: '2rem',
+        width: 'calc(100vw - 4rem)',
+        height: 'calc(100vh - 4rem)',
+        y: 0,
+        x: 0,
+        scale: 1,
+        zIndex: 50,
+        bottom: 'auto',
+        left: 'auto',
+    },
+    shrinking: { // State when shrinking back before transition
+        y: '10%',
+        opacity: 1,
+        scale: 1,
+        position: 'fixed' as 'fixed', // Correctly typed
+        inset: 'auto',
+        width: '90%',
+        height: '95%',
+        bottom: 0,
+        left: '5%',
+        zIndex: 20,
+    }
+};
 
 
   return (

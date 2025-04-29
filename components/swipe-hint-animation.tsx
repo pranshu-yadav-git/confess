@@ -4,7 +4,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Hand } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 
 const SwipeHintAnimation: React.FC = () => {
   const containerVariants = {

@@ -3,12 +3,12 @@
 
  import React, { useState, useRef, useEffect } from 'react';
  import { motion, AnimatePresence } from 'framer-motion';
- import { Button } from '@/components/ui/button';
- import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
- import { useToast } from "@/hooks/use-toast";
+ import { Button } from '../components/ui/button';
+ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
+ import { useToast } from "../hooks/use-toast";
  import Confetti from 'react-confetti';
  import { useWindowSize } from '@react-hook/window-size';
- import { cn } from '@/lib/utils'; // Import cn for conditional classes
+ import { cn } from '../lib/utils'; // Import cn for conditional classes
 
  interface ProposalGameProps {}
 
@@ -40,7 +40,7 @@
    const [showConfettiPopup, setShowConfettiPopup] = useState(false);
    const gameAreaRef = useRef<HTMLDivElement>(null);
    const noButtonRef = useRef<HTMLButtonElement>(null);
-   const { width, height } = useWindowSize();
+   const [ width, height ] = useWindowSize();
 
    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
      if (!noButtonRef.current || !gameAreaRef.current || !isNoButtonMoving) return; // Only move if logic is active
