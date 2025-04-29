@@ -5,7 +5,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { Heart, Hand } from 'lucide-react'; // Import Hand icon
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 import Image from 'next/image';
 import Confetti from 'react-confetti';
 import { useWindowSize } from '@react-hook/window-size';
