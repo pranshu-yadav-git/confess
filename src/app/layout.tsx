@@ -27,11 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
-        {children}
-        <Toaster /> {/* Add Toaster here */}
-      </body>
-    </html>
+    <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
+      {children}
+      <Toaster /> {/* Add Toaster here */}
+    </body>
   );
 }
