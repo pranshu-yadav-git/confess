@@ -1,7 +1,7 @@
 [build]
   base = ""
   publish = ".next"
-  command = "npm run build && npm run export"
+  command = "npm run build"
 
 [build.environment]
   NODE_ENV = "development"
