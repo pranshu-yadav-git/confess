@@ -27,9 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
-      {children}
-      <Toaster /> {/* Add Toaster here */}
-    </body>
+    <html lang="en"> {/* This should be managed by Next.js automatically */}
+      <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
+        {children}
+        <Toaster /> {/* Add Toaster here */}
+      </body>
+    </html>
   );
 }
