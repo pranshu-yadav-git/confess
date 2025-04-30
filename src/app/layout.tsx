@@ -1,37 +1,32 @@
-import type { Metadata } from 'next';
-import { Dancing_Script, Inter } from 'next/font/google'; // Use Inter as fallback/base
-import './globals.css';
-import { Toaster } from "../components/ui/toaster"; // Import Toaster
+import { Dancing_Script, Inter } from 'next/font/google'; 
+import './globals.css'; 
+import { Toaster } from "../components/ui/toaster"; 
 
-// Using Inter as a base sans-serif font
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter', // Define CSS variable for Inter
+  variable: '--font-inter', 
 });
 
-// Romantic script font
 const dancingScript = Dancing_Script({
   subsets: ['latin'],
-  weight: ['400', '700'], // Include weights if needed
-  variable: '--font-dancing-script', // Define CSS variable for Dancing Script
+  weight: ['400', '700'], 
+  variable: '--font-dancing-script', 
 });
 
-export const metadata: Metadata = {
-  title: 'A Love Revelation', // Updated title
+export const metadata = {
+  title: 'A Love Revelation',
   description: 'A special message just for you.',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en"> {/* This should be managed by Next.js automatically */}
-      <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
-        {children}
-        <Toaster /> {/* Add Toaster here */}
-      </body>
-    </html>
+    <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
+      {children}
+      <Toaster />
+    </body>
   );
 }
