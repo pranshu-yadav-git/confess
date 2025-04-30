@@ -28,10 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Add both font variables to the body class */}
       <body className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}>
-        {/* Tailwind's font-sans will use --font-inter by default (set in tailwind.config) */}
-        {/* Apply font-dancing-script class where needed, or set it globally in globals.css */}
         {children}
         <Toaster /> {/* Add Toaster here */}
       </body>
